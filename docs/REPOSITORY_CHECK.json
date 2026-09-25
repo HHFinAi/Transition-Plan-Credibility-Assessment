@@ -1,0 +1,8 @@
+{
+  "agent": "transition-plan-credibility-agent",
+  "routes": 3,
+  "stages": 10,
+  "operations": 8,
+  "checks": "PASS",
+  "remote_urls_checked": false
+}

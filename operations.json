@@ -1,0 +1,96 @@
+{
+  "agent": "transition-plan-credibility-agent",
+  "version": "0.2.0",
+  "operations": [
+    {
+      "operation": "activity_intensity_bridge",
+      "signature": "(activity0: 'float', intensity0: 'float', activity1: 'float', intensity1: 'float') -> 'dict'",
+      "argument_units": {
+        "activity0": "activity_units",
+        "intensity0": "tCO2e_per_activity",
+        "activity1": "activity_units",
+        "intensity1": "tCO2e_per_activity"
+      },
+      "output_unit": "emissions_decomposition",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "capex_alignment_bounds",
+      "signature": "(verified_aligned_capex: 'float', unassessed_capex: 'float', total_capex: 'float') -> 'dict'",
+      "argument_units": {
+        "verified_aligned_capex": "$money",
+        "unassessed_capex": "$money",
+        "total_capex": "$money"
+      },
+      "output_unit": "capex_bounds",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "dscr",
+      "signature": "(cash_available: 'float', debt_service: 'float') -> 'float'",
+      "argument_units": {
+        "cash_available": "$money",
+        "debt_service": "$money"
+      },
+      "output_unit": "multiple",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "funding_gap",
+      "signature": "(required_investment: 'float', committed_funding: 'float') -> 'float'",
+      "argument_units": {
+        "required_investment": "$money",
+        "committed_funding": "$money"
+      },
+      "output_unit": "$money",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "holding_period_return",
+      "signature": "(initial_dirty_price: 'float', exit_dirty_price: 'float', cash_income: 'float', funding_cost: 'float', transaction_cost: 'float') -> 'float'",
+      "argument_units": {
+        "initial_dirty_price": "$money",
+        "exit_dirty_price": "$money",
+        "cash_income": "$money",
+        "funding_cost": "$money",
+        "transaction_cost": "$money"
+      },
+      "output_unit": "decimal_return",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "npv",
+      "signature": "(cashflows: 'list[float]', annual_discount: 'float') -> 'float'",
+      "argument_units": {
+        "cashflows": "$money",
+        "annual_discount": "decimal"
+      },
+      "output_unit": "$money",
+      "description": "Periodic NPV; cashflows[0] is at time zero, then annual periods."
+    },
+    {
+      "operation": "scale",
+      "signature": "(value: 'float', factor: 'float') -> 'float'",
+      "argument_units": {
+        "value": "$input_unit",
+        "factor": "conversion_factor"
+      },
+      "output_unit": "$output_unit",
+      "description": "Explicit arithmetic conversion; external unit semantics need human review."
+    },
+    {
+      "operation": "target_path",
+      "signature": "(base_emissions: 'float', target_emissions: 'float', base_year: 'int', target_year: 'int', observation_year: 'int', observed_emissions: 'float') -> 'dict'",
+      "argument_units": {
+        "base_emissions": "tCO2e",
+        "target_emissions": "tCO2e",
+        "base_year": "year",
+        "target_year": "year",
+        "observation_year": "year",
+        "observed_emissions": "tCO2e"
+      },
+      "output_unit": "target_progress",
+      "description": "See source code and domain methodology for assumptions."
+    }
+  ]
+}

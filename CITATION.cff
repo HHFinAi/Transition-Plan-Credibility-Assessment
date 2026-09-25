@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this research software and inspect its limitations."
+title: "Transition-Plan Credibility Assessment Agent"
+version: "0.2.0"
+date-released: "2026-09-25"
+type: software
+authors:
+  - family-names: HHFinAi
+license: MIT
+abstract: "Evidence-backed institutional buy-side research workflow prototype; no independent certification or execution authority."

@@ -1,0 +1,2 @@
+id,kind,title,uri,locator,observed_on,available_on,retrieved_on,review_status
+SYN-1,synthetic,Original fictional fixture,synthetic://hhfinai/fixture-1,examples/synthetic-request.json,2026-09-25,2026-09-25,2026-09-25,REVIEWED

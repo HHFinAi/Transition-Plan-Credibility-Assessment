@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "files": {
+    "__init__.py": "eab012d64331eeb680bc4f06669aa5d686e94dac29e4d0470db29e31a9da720d",
+    "__main__.py": "518e4c17e506cc55f92b31bc965c283e3a0d82de32ea22daac82fc65c707bb3e",
+    "demo.py": "66ad8602905d4a8516588c34ec76882f25e9b824d2e8d33933974711da9f3f35",
+    "engine.py": "1f426c863bb1fa5ab7f0ea845eb7f0df861c8d6302a18f2dc746d232807e857a",
+    "maths.py": "7b84dd5a33c2fa9cc334fe427ccda3871af2413acef2528ecf78a27d6064808a",
+    "validation.py": "99016d972d5d79faf319d63ada6dec7505401982a7a02cc029d1950af150baab"
+  }
+}

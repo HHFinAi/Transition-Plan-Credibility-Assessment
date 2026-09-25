@@ -1,0 +1,11 @@
+[project]
+name = "transition-plan-credibility-agent"
+version = "0.2.0"
+description = "Transition credibility research workflow by HHFinAi"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "HHFinAi"}]
+dependencies = []
+
+[tool.hhfinai]
+execution = "Run from repository root; wheel installation not supported or tested"

@@ -1,0 +1,12 @@
+stage,claim_id,kind,claim,scope,period,evidence_ids
+mandate,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+evidence,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+baseline,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+targets,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+implementation,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+valuation,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+valuation,CALC1,CALCULATION,"Recomputed illustrative target_path; inspect arguments, units and result in calculation C1.",FICTIONAL-SUBJECT,2026-09-25,
+market,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+expression,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+challenge,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,
+memo,A1,ASSUMPTION,Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.,FICTIONAL-SUBJECT,2026-09-25,

@@ -1,0 +1,13 @@
+{
+  "fact": "The registered official reference is IFRS Foundation transition disclosure guidance; it is recorded as EDUCATIONAL_GUIDANCE, not as issuer-specific diligence.",
+  "limitations": [
+    "Only the source identity/version and stated overview were reviewed.",
+    "This is not legal verification, source reproduction or live investment research."
+  ],
+  "conclusion": "NEEDS_DATA: methodology reference alone cannot establish investment attractiveness, mandate conformity or achieved outcomes.",
+  "gaps": [
+    "Reviewed issuer and instrument evidence with scoped metrics.",
+    "Applicable mandate and legal/contractual interpretation.",
+    "Current market or private contract evidence if an investable expression is requested."
+  ]
+}

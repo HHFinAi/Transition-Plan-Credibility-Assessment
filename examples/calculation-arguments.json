@@ -1,0 +1,8 @@
+{
+  "base_emissions": 1000000,
+  "target_emissions": 500000,
+  "base_year": 2020,
+  "target_year": 2030,
+  "observation_year": 2026,
+  "observed_emissions": 750000
+}

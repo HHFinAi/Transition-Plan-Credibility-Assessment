@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "mode": "research",
+  "as_of": "2026-09-25",
+  "route": "corporate-plan",
+  "subject": {
+    "id": "REPLACE-SUBJECT",
+    "name": "Replace with verified subject"
+  },
+  "mandate": {
+    "objective": "REPLACE with investment decision and binding constraints",
+    "base_currency": "USD",
+    "horizon": "REPLACE with dated horizon",
+    "constraints": "REPLACE from actual mandate",
+    "risk_budget": "REPLACE with approved risk limits",
+    "jurisdiction": "REPLACE with applicable jurisdictions"
+  },
+  "freshness_policy": {
+    "market_max_age_days": 1,
+    "standard_review_max_age_days": 90
+  },
+  "instruments": [
+    {
+      "id": "REPLACE-INSTRUMENT",
+      "name": "Replace with verified instrument",
+      "asset_type": "equity",
+      "currency": "USD",
+      "market_access": "unknown",
+      "label": "none"
+    }
+  ],
+  "evidence": []
+}

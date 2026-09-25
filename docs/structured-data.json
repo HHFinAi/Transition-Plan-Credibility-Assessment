@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Transition-Plan Credibility Assessment Agent",
+  "description": "Transition credibility workflow for institutional buy-side research, with evidence records, bounded calculations and human review. Not independently certified; no trade execution.",
+  "programmingLanguage": "Python",
+  "version": "0.2.0",
+  "author": {
+    "@type": "Organization",
+    "name": "HHFinAi"
+  },
+  "license": "https://spdx.org/licenses/MIT.html",
+  "runtimePlatform": "Python 3.10+; local repository-root execution",
+  "dateModified": "2026-09-25"
+}

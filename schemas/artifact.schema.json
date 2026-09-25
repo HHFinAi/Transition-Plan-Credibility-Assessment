@@ -1,0 +1,443 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HHFinAi stage artifact",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "input_digest",
+    "stage_id",
+    "status",
+    "producer",
+    "summary",
+    "claims",
+    "calculations",
+    "standards_considered",
+    "sections",
+    "gaps",
+    "issues",
+    "confidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_digest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "COMPLETE",
+        "NEEDS_DATA",
+        "BLOCKED"
+      ]
+    },
+    "producer": {
+      "type": "object",
+      "required": [
+        "name",
+        "type"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "human",
+            "ai",
+            "synthetic"
+          ]
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "text",
+          "scope",
+          "period",
+          "evidence_ids",
+          "limitations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "period": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "FACT",
+              "INFERENCE",
+              "ASSUMPTION",
+              "CALCULATION",
+              "METHOD"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "basis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "standard_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "applied_as_current_rule": {
+            "type": "boolean"
+          },
+          "calculation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "metric": {
+            "type": "object",
+            "required": [
+              "evidence_id",
+              "metric_id",
+              "value",
+              "unit"
+            ],
+            "properties": {
+              "evidence_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "metric_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "calculations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "operation",
+          "arguments",
+          "input_provenance",
+          "result",
+          "output_unit"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "arguments": {
+            "type": "object"
+          },
+          "input_provenance": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": [
+                "unit"
+              ],
+              "properties": {
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "assumption": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "metric_id": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "result": {},
+          "output_unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "currency": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "measurement_unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "input_unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result_unit": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "standards_considered": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "analysis",
+          "claim_ids"
+        ],
+        "properties": {
+          "analysis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "severity",
+          "status",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "severity": {
+            "enum": [
+              "MINOR",
+              "MATERIAL",
+              "CRITICAL"
+            ]
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "RESOLVED"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resolution": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": [
+        "value",
+        "basis"
+      ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "investment_expression": {
+      "type": "object",
+      "required": [
+        "status",
+        "execution_authorized",
+        "instrument_ids",
+        "checks",
+        "valuation_basis",
+        "entry_condition",
+        "catalyst",
+        "downside",
+        "liquidity",
+        "hedging",
+        "thesis_breakers"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "RESEARCH_ONLY",
+            "PUBLIC_MARKET_CANDIDATE",
+            "PRIVATE_MARKET_CANDIDATE",
+            "NO_INVESTMENT_ROUTE"
+          ]
+        },
+        "execution_authorized": {
+          "const": false
+        },
+        "instrument_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "checks": {
+          "type": "object",
+          "required": [
+            "mandate_fit",
+            "valuation",
+            "liquidity",
+            "downside",
+            "legal_access",
+            "portfolio_risk"
+          ],
+          "additionalProperties": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "UNKNOWN"
+            ]
+          }
+        },
+        "valuation_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entry_condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "catalyst": {
+          "type": "string",
+          "minLength": 1
+        },
+        "downside": {
+          "type": "string",
+          "minLength": 1
+        },
+        "liquidity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hedging": {
+          "type": "string",
+          "minLength": 1
+        },
+        "thesis_breakers": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quotes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "instrument_id",
+              "evidence_id",
+              "metric_id",
+              "quote_type",
+              "price_convention",
+              "timestamp_with_timezone"
+            ]
+          }
+        },
+        "contract_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "domain_assessment": {
+      "type": "object",
+      "description": "Typed domain declarations; required fields validated against frozen agent configuration."
+    }
+  }
+}

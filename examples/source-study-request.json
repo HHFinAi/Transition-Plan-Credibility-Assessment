@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "mode": "source-study",
+  "as_of": "2026-09-25",
+  "route": "corporate-plan",
+  "subject": {
+    "id": "FICTIONAL-SUBJECT",
+    "name": "Fictional HHFinAi research subject"
+  },
+  "mandate": {
+    "objective": "Bounded official-methodology source study; no issuer diligence or investment approval.",
+    "base_currency": "USD",
+    "horizon": "Illustrative five-year scenario",
+    "constraints": "No actual positions, trading, clients or real issuers.",
+    "risk_budget": "Zero capital allocated: synthetic demonstration",
+    "jurisdiction": "Illustrative only; legal access not assessed"
+  },
+  "freshness_policy": {
+    "market_max_age_days": 1,
+    "standard_review_max_age_days": 90
+  },
+  "instruments": [
+    {
+      "id": "FICTIONAL-INSTRUMENT",
+      "name": "Fictional non-investable test instrument",
+      "asset_type": "equity",
+      "currency": "USD",
+      "market_access": "not-investable",
+      "label": "none"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "METHOD-1",
+      "title": "IFRS Foundation transition disclosure guidance",
+      "publisher": "Official framework publisher identified in primary URL",
+      "uri": "https://www.ifrs.org/sustainability/knowledge-hub/ifrs-resources/",
+      "locator": "Official page heading and overview",
+      "kind": "methodology",
+      "review_status": "REVIEWED",
+      "scope": [
+        "methodology"
+      ],
+      "observed_on": "2025-06-23",
+      "available_on": "2025-06-23",
+      "retrieved_on": "2026-09-25",
+      "metrics": []
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-09-25",
+  "standards": [
+    {
+      "id": "IFRS-TRANSITION",
+      "title": "IFRS Foundation transition disclosure guidance",
+      "url": "https://www.ifrs.org/sustainability/knowledge-hub/ifrs-resources/",
+      "source_date": "2025-06-23",
+      "checked_on": "2026-09-25",
+      "status": "EDUCATIONAL_GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "note": "Guidance on applying IFRS S2; does not require an entity to have a transition plan or prove its delivery.",
+      "jurisdiction": "See primary source and mandate",
+      "effective_from": null,
+      "verification_scope": "Official landing-page/source description checked; not an exhaustive line-by-line compliance mapping"
+    },
+    {
+      "id": "SBTI-V2",
+      "title": "SBTi Corporate Net-Zero Standard V2.0 release",
+      "url": "https://sciencebasedtargets.org/news/the-sbti-releases-corporate-net-zero-standard-v2-0-to-accelerate-corporate-climate-action",
+      "source_date": "2026-06-11",
+      "checked_on": "2026-09-25",
+      "status": "PUBLISHED_VALIDATION_NOT_YET_OPEN",
+      "can_apply_as_current_rule": false,
+      "note": "Published 11 June 2026. Release is not company target validation.",
+      "jurisdiction": "See primary source and mandate",
+      "effective_from": null,
+      "verification_scope": "Official landing-page/source description checked; not an exhaustive line-by-line compliance mapping"
+    },
+    {
+      "id": "SBTI-VALIDATION",
+      "title": "SBTi corporate net-zero applicability and validation",
+      "url": "https://sciencebasedtargets.org/corporate-net-zero",
+      "source_date": "2026-09-25",
+      "checked_on": "2026-09-25",
+      "status": "OFFICIAL_STATUS_PAGE",
+      "can_apply_as_current_rule": false,
+      "note": "Page checked 25 September 2026: V2.0 validation planned for Q1 2027. Source date here is review date for a dynamic page, not an asserted publication date.",
+      "jurisdiction": "See primary source and mandate",
+      "effective_from": null,
+      "verification_scope": "Official landing-page/source description checked; not an exhaustive line-by-line compliance mapping"
+    },
+    {
+      "id": "PCAF-2025",
+      "title": "PCAF Part A financed emissions, third edition 2025",
+      "url": "https://carbonaccountingfinancials.com/standard",
+      "source_date": "2025-12-02",
+      "checked_on": "2026-09-25",
+      "status": "VOLUNTARY_ACCOUNTING_STANDARD",
+      "can_apply_as_current_rule": false,
+      "note": "Executable scope is a bounded listed-company equity/corporate-debt EVIC helper. Other asset classes need their own methods. Avoided emissions are separate from the inventory.",
+      "jurisdiction": "See primary source and mandate",
+      "effective_from": null,
+      "verification_scope": "Official landing page and displayed PDF pages 41–42 reviewed for listed-company numerator and EVIC denominator. Not an exhaustive conformity audit.",
+      "source_document_url": "https://carbonaccountingfinancials.com/files/standard-launch-2025/PCAF-PartA-2025-V3-15012026.pdf",
+      "source_locator": "Part A third edition, printed pages 41–42 (PDF pages 41–42, one-indexed)"
+    }
+  ]
+}
