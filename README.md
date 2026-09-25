@@ -1,5 +1,7 @@
 # Transition-Plan Credibility Assessment Agent
 
+[![Validate research workflow](https://github.com/HHFinAi/Transition-Plan-Credibility-Assessment/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/HHFinAi/Transition-Plan-Credibility-Assessment/actions/workflows/validate.yml)
+
 **Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.**
 
 Are the issuer’s targets supported by comparable emissions boundaries, funded implementation and observable delivery?
