@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "mode": "synthetic",
+  "as_of": "2026-09-25",
+  "route": "corporate-plan",
+  "subject": {
+    "id": "FICTIONAL-SUBJECT",
+    "name": "Fictional HHFinAi research subject"
+  },
+  "mandate": {
+    "objective": "Demonstrate the workflow with fictional data, not produce an investment recommendation.",
+    "base_currency": "USD",
+    "horizon": "Illustrative five-year scenario",
+    "constraints": "No actual positions, trading, clients or real issuers.",
+    "risk_budget": "Zero capital allocated: synthetic demonstration",
+    "jurisdiction": "Illustrative only; legal access not assessed"
+  },
+  "freshness_policy": {
+    "market_max_age_days": 1,
+    "standard_review_max_age_days": 90
+  },
+  "instruments": [
+    {
+      "id": "FICTIONAL-INSTRUMENT",
+      "name": "Fictional non-investable test instrument",
+      "asset_type": "equity",
+      "currency": "USD",
+      "market_access": "not-investable",
+      "label": "none"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "SYN-1",
+      "title": "Original fictional fixture",
+      "publisher": "HHFinAi",
+      "uri": "synthetic://hhfinai/fixture-1",
+      "locator": "examples/synthetic-request.json",
+      "kind": "synthetic",
+      "review_status": "REVIEWED",
+      "scope": [
+        "FICTIONAL-SUBJECT",
+        "FICTIONAL-INSTRUMENT"
+      ],
+      "observed_on": "2026-09-25",
+      "available_on": "2026-09-25",
+      "retrieved_on": "2026-09-25",
+      "metrics": [
+        {
+          "id": "fixture-value",
+          "value": 100,
+          "unit": "USD",
+          "period": "2026-09-25",
+          "scope": "FICTIONAL-SUBJECT"
+        }
+      ]
+    }
+  ]
+}

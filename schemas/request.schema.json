@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HHFinAi research request",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "mode",
+    "as_of",
+    "route",
+    "subject",
+    "mandate",
+    "freshness_policy",
+    "instruments",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "mode": {
+      "enum": [
+        "research",
+        "synthetic",
+        "source-study"
+      ]
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "route": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "mandate": {
+      "type": "object",
+      "required": [
+        "objective",
+        "base_currency",
+        "horizon",
+        "constraints",
+        "risk_budget",
+        "jurisdiction"
+      ],
+      "properties": {
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_currency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "horizon": {
+          "type": "string",
+          "minLength": 1
+        },
+        "constraints": {
+          "type": "string",
+          "minLength": 1
+        },
+        "risk_budget": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "freshness_policy": {
+      "type": "object",
+      "required": [
+        "market_max_age_days",
+        "standard_review_max_age_days"
+      ],
+      "properties": {
+        "market_max_age_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "standard_review_max_age_days": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "asset_type",
+          "currency",
+          "market_access"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "asset_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "currency": {
+            "type": "string",
+            "minLength": 1
+          },
+          "market_access": {
+            "enum": [
+              "public",
+              "private",
+              "not-investable",
+              "unknown"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "publisher",
+          "uri",
+          "locator",
+          "kind",
+          "review_status",
+          "scope",
+          "observed_on",
+          "available_on",
+          "retrieved_on"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uri": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "issuer",
+              "instrument",
+              "market",
+              "ecological",
+              "contract",
+              "official",
+              "methodology",
+              "synthetic"
+            ]
+          },
+          "review_status": {
+            "enum": [
+              "REVIEWED",
+              "UNREVIEWED",
+              "CONFLICTED"
+            ]
+          },
+          "scope": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "observed_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "available_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "retrieved_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "metrics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "value",
+                "unit",
+                "period",
+                "scope"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "value": {
+                  "type": "number"
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "period": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "scope": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "content_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

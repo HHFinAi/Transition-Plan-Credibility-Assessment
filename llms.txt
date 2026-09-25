@@ -1,0 +1,11 @@
+# Transition-Plan Credibility Assessment Agent
+
+> HHFinAi research software. Optional navigation only; not crawler instructions or a ranking guarantee.
+
+- [Overview](README.md)
+- [Workflow](WORKFLOW.md)
+- [Capabilities and limits](docs/INSTITUTIONAL_QUALITY.md)
+- [Evidence and audit](docs/AUDIT.md)
+- [Methods](docs/METHODOLOGY.md)
+- [Sources](references/SOURCES.md)
+- [Validation](docs/VALIDATION.md)

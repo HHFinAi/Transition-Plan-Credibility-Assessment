@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.0",
+  "name": "transition-plan-credibility-agent",
+  "title": "Transition-Plan Credibility Assessment Agent",
+  "owner": "HHFinAi",
+  "version": "0.2.0",
+  "default_route": "corporate-plan",
+  "routes": {
+    "corporate-plan": {
+      "title": "Corporate Plan",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "baseline",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "targets",
+          "depends_on": [
+            "baseline"
+          ]
+        },
+        {
+          "id": "implementation",
+          "depends_on": [
+            "targets"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "implementation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "equity",
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    },
+    "sector-comparison": {
+      "title": "Sector Comparison",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "baseline",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "targets",
+          "depends_on": [
+            "baseline"
+          ]
+        },
+        {
+          "id": "implementation",
+          "depends_on": [
+            "targets"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "implementation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "equity",
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    },
+    "annual-progress": {
+      "title": "Annual Progress",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "baseline",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "targets",
+          "depends_on": [
+            "baseline"
+          ]
+        },
+        {
+          "id": "implementation",
+          "depends_on": [
+            "targets"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "implementation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "equity",
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    }
+  },
+  "stages": {
+    "mandate": {
+      "id": "mandate",
+      "title": "Mandate and investable decision",
+      "required_sections": [
+        "decision_question",
+        "instrument_boundary",
+        "mandate_constraints"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/mandate.md",
+      "investment_gate": false
+    },
+    "evidence": {
+      "id": "evidence",
+      "title": "Evidence intake and reconciliation",
+      "required_sections": [
+        "source_register_review",
+        "boundary_reconciliation",
+        "material_gaps"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/evidence.md",
+      "investment_gate": false
+    },
+    "baseline": {
+      "id": "baseline",
+      "title": "Emissions baseline and comparability",
+      "required_sections": [
+        "scopes_boundaries",
+        "base_year_restatements",
+        "absolute_vs_intensity",
+        "offsets_separate"
+      ],
+      "standard_ids": [
+        "PCAF-2025"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/baseline.md",
+      "investment_gate": false
+    },
+    "targets": {
+      "id": "targets",
+      "title": "Target architecture and applicability",
+      "required_sections": [
+        "target_register",
+        "coverage_and_interims",
+        "standard_version",
+        "dependencies"
+      ],
+      "standard_ids": [
+        "IFRS-TRANSITION",
+        "SBTI-V2",
+        "SBTI-VALIDATION"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/targets.md",
+      "investment_gate": false
+    },
+    "implementation": {
+      "id": "implementation",
+      "title": "Implementation and capital allocation",
+      "required_sections": [
+        "funded_capex",
+        "technology_readiness",
+        "operating_plan",
+        "governance_and_incentives"
+      ],
+      "standard_ids": [
+        "IFRS-TRANSITION"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/implementation.md",
+      "investment_gate": false
+    },
+    "valuation": {
+      "id": "valuation",
+      "title": "Progress and financial consequences",
+      "required_sections": [
+        "trajectory_gap",
+        "activity_intensity_bridge",
+        "cashflow_implications",
+        "sensitivity"
+      ],
+      "standard_ids": [
+        "IFRS-TRANSITION"
+      ],
+      "requires_calculation": true,
+      "prompt_path": "prompts/stages/valuation.md",
+      "investment_gate": false,
+      "allowed_operations": [
+        "target_path",
+        "activity_intensity_bridge",
+        "capex_alignment_bounds",
+        "funding_gap"
+      ]
+    },
+    "market": {
+      "id": "market",
+      "title": "Market context and implementation evidence",
+      "required_sections": [
+        "market_or_contract_evidence",
+        "liquidity_funding_access",
+        "portfolio_context"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/market.md",
+      "investment_gate": false
+    },
+    "expression": {
+      "id": "expression",
+      "title": "Investment-decision handoff",
+      "required_sections": [
+        "valuation_and_entry",
+        "risk_catalysts_and_thesis_breakers",
+        "eligibility_review"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/expression.md",
+      "investment_gate": true
+    },
+    "challenge": {
+      "id": "challenge",
+      "title": "Independent challenge and exceptions",
+      "required_sections": [
+        "source_challenge",
+        "model_and_method_limits",
+        "material_issues"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/challenge.md",
+      "investment_gate": false
+    },
+    "memo": {
+      "id": "memo",
+      "title": "Investment committee and accountable review",
+      "required_sections": [
+        "investment_question_and_answer",
+        "financial_vs_sustainability_conclusions",
+        "evidence_and_calculations",
+        "decision_conditions_and_limits"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/memo.md",
+      "investment_gate": false,
+      "required_assessments": {
+        "target_basis": [
+          "absolute",
+          "intensity",
+          "mixed",
+          "unknown"
+        ],
+        "gross_emissions_separate": [
+          true
+        ],
+        "boundary_review": [
+          "comparable",
+          "restated",
+          "unresolved"
+        ],
+        "validation_status": [
+          "validated_on_named_version",
+          "not_validated",
+          "not_verified"
+        ],
+        "publication_not_validation": [
+          true
+        ]
+      }
+    }
+  },
+  "demo_operation": "target_path",
+  "demo_arguments": {
+    "base_emissions": 1000000,
+    "target_emissions": 500000,
+    "base_year": 2020,
+    "target_year": 2030,
+    "observation_year": 2026,
+    "observed_emissions": 750000
+  },
+  "demo_assessment": "Fictional issuer: an absolute target and a funded implementation plan must be tested separately; a lower intensity need not mean lower absolute emissions.",
+  "demo_domain_assessment": {
+    "target_basis": "absolute",
+    "gross_emissions_separate": true,
+    "boundary_review": "comparable",
+    "validation_status": "not_verified",
+    "publication_not_validation": true
+  },
+  "capabilities": {
+    "embedded_llm": false,
+    "live_data": false,
+    "trade_execution": false,
+    "scheduler": false,
+    "external_communications": false,
+    "authenticated_human_identity": false
+  }
+}

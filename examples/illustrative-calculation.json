@@ -1,0 +1,50 @@
+{
+  "id": "C1",
+  "operation": "target_path",
+  "arguments": {
+    "base_emissions": 1000000,
+    "target_emissions": 500000,
+    "base_year": 2020,
+    "target_year": 2030,
+    "observation_year": 2026,
+    "observed_emissions": 750000
+  },
+  "currency": "USD",
+  "measurement_unit": "specified_outcome",
+  "input_unit": "percent",
+  "result_unit": "decimal",
+  "input_provenance": {
+    "base_emissions": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "tCO2e"
+    },
+    "target_emissions": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "tCO2e"
+    },
+    "base_year": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "year"
+    },
+    "target_year": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "year"
+    },
+    "observation_year": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "year"
+    },
+    "observed_emissions": {
+      "assumption": "Explicit illustrative input, not a market observation or verified forecast.",
+      "unit": "tCO2e"
+    }
+  },
+  "result": {
+    "required_compound_annual_reduction": 0.06696700846319259,
+    "illustrative_path_emissions": 659753.9553864471,
+    "gap_tco2e": 90246.04461355286,
+    "observed_reduction_fraction": 0.25,
+    "path_is_scenario_not_science_alignment": true
+  },
+  "output_unit": "target_progress"
+}
