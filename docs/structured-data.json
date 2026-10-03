@@ -11,5 +11,6 @@
   },
   "license": "https://spdx.org/licenses/MIT.html",
   "runtimePlatform": "Python 3.10+; local repository-root execution",
-  "dateModified": "2026-09-25"
+  "dateModified": "2026-09-25",
+  "codeRepository": "https://github.com/HHFinAi/Transition-Plan-Credibility-Assessment"
 }

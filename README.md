@@ -52,7 +52,7 @@ The [bounded source-study packet](examples/reports/source-study-packet.md) uses 
 ## What does not run
 No embedded AI model, live market feed, automatic extraction, scheduler, broker connection, external messaging or automatic voting. Human-review names are attestations, not authenticated identities. Tests establish selected software behavior—not alpha, comprehensive legal conformity, ecological validity, causal impact, complete data quality or production security. Runtime and host compatibility beyond the recorded tests are not certified.
 
-## Repository and publication
-[GitHub Desktop publication guide](START_HERE_GITHUB_DESKTOP.md) · [Prepared metadata](repository-metadata.json) · [GEO/SGO discoverability](docs/GEO_SEO.md) · [FAQ](docs/FAQ.md) · [Notices](NOTICE.md)
+## Published repository and local synchronization
+[GitHub Desktop synchronization and new-copy guide](START_HERE_GITHUB_DESKTOP.md) · [Repository metadata](repository-metadata.json) · [GEO/SGO discoverability](docs/GEO_SEO.md) · [FAQ](docs/FAQ.md) · [Notices](NOTICE.md)
 
-This is a locally prepared package for **HHFinAi**, not a claim of an already published repository. Preserve `.git` when integrating with existing work. All eight expansion packages use a shared versioned core, independently vendored to run offline. Old v0.1.0 repositories are not modified or silently upgraded. Use a new run after changing the runtime.
+The source code is published at [HHFinAi/Transition-Plan-Credibility-Assessment](https://github.com/HHFinAi/Transition-Plan-Credibility-Assessment). In GitHub Desktop, use **Fetch origin** and **Pull origin** before editing an existing clone. Preserve `.git` and review changes on a working branch. All eight expansion packages use a shared versioned core, independently vendored to run offline. Installing or updating one repository does not silently upgrade another. Use a new run after changing the runtime.
