@@ -1,6 +1,6 @@
 {
   "owner": "HHFinAi",
-  "repository_name": "transition-plan-credibility-agent",
+  "repository_name": "Transition-Plan-Credibility-Assessment",
   "description": "Transition credibility: institutional-quality buy-side research with traceable, auditable workflows and investment-decision handoffs. Research support, not certification or trading.",
   "topics": [
     "sustainable-finance",
@@ -12,7 +12,9 @@
     "human-in-the-loop",
     "transition-analysis"
   ],
-  "publication_status": "prepared-not-published",
-  "intended_repository_url": "https://github.com/HHFinAi/transition-plan-credibility-agent",
-  "homepage": null
+  "publication_status": "published",
+  "homepage": null,
+  "repository_url": "https://github.com/HHFinAi/Transition-Plan-Credibility-Assessment",
+  "visibility": "public",
+  "publication_status_checked_on": "2026-10-03"
 }

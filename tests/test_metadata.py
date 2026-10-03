@@ -2,7 +2,7 @@ import importlib.util
 from pathlib import Path
 import unittest
 from sf_agent import engine
-from sf_agent.validation import load_json
+from sf_agent.validation import DataError, load_json
 
 class Metadata(unittest.TestCase):
     def test_source_anchors_have_dates_and_status(self):
@@ -16,4 +16,27 @@ class Metadata(unittest.TestCase):
         manifest=load_json(engine.ROOT/'COMMON_CORE_MANIFEST.json');self.assertNotIn('analytics.py',manifest['files']);self.assertIn('engine.py',manifest['files'])
     def test_repository_owner(self): self.assertEqual(load_json(engine.ROOT/'repository-metadata.json')['owner'],'HHFinAi')
     def test_source_study_is_not_research_mode(self): self.assertEqual(load_json(engine.ROOT/'examples/source-study-request.json')['mode'],'source-study')
+    def publication_checker(self):
+        spec = importlib.util.spec_from_file_location('repository_check', engine.ROOT/'scripts/check_repository.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module.validate_publication_metadata
+
+    def test_published_repository_metadata(self):
+        metadata = load_json(engine.ROOT/'repository-metadata.json')
+        self.assertEqual(metadata['publication_status'], 'published')
+        self.publication_checker()(metadata)
+
+    def test_new_unpublished_copy_is_supported(self):
+        self.publication_checker()({'owner': 'HHFinAi', 'publication_status': 'prepared-not-published'})
+
+    def test_inconsistent_publication_fields_are_rejected(self):
+        metadata = load_json(engine.ROOT/'repository-metadata.json')
+        validate = self.publication_checker()
+        for change in ({'publication_status': 'unknown'}, {'repository_name': ''},
+                       {'repository_url': None}, {'repository_url': 'https://example.com/repo'},
+                       {'visibility': 'user-must-choose'}):
+            with self.subTest(change=change), self.assertRaises(DataError):
+                validate(dict(metadata, **change))
+
 if __name__=='__main__': unittest.main()
