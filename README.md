@@ -10,6 +10,8 @@ Are the issuer’s targets supported by comparable emissions boundaries, funded 
 
 [Worked example](examples/WORKED_EXAMPLE.md) · [Workflow](WORKFLOW.md) · [Evidence and audit](docs/AUDIT.md) · [Controls and limits](docs/INSTITUTIONAL_QUALITY.md) · [Validation](docs/VALIDATION.md)
 
+Start with the [AI infrastructure research handoff](examples/ai-infrastructure/README.md), prepared 16 October 2026: equipment life, power commitments, emissions boundaries and capital recovery become specific evidence gates. Issuer transition underwriting remains NEEDS_DATA.
+
 ## What it delivers
 - Target and boundary reconciliation
 - Funded capex and technology-dependency assessment
