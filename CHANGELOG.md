@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-22 — Responsible AI guidance
+
+- Added a project-specific responsible AI policy and visible README entry point, with account-level standards and dated Anthropic references.
+- Linked existing agent and contribution guidance where present; clarified evidence, disclosure, privacy and human-review expectations. Documentation does not establish runtime enforcement or retrospective validation.
+
 ## 2026-10-16 — AI infrastructure research handoff
 
 - Added an evidence-gated analytical handoff to the original AI infrastructure case and updated research navigation. No runtime or human-approval control changed.
